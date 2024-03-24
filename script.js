@@ -1,6 +1,7 @@
 let no1 = 0;
 let no2 = 0;
 let operator = 0;
+let disptot = 0;
 
 function add(a,b){
     return a+b;
@@ -105,38 +106,72 @@ button0.addEventListener('click',() => {
     arr2.push(0);
     return display.textContent = arr.join('');
 })
+
+// Addition Function //
 const addi = document.querySelector(".addi")
 addi.addEventListener('click',() => {
+    if(arr.length === 0 ){
+        alert('Please enter a number')
+        return display.textContent = 0;
+    }
+    else{
     arr.push('+');
     no1 = arr2.join('');
     arr2 = [];
     operator = '+'
     return display.textContent = arr.join('');
+    }
 })
+
+// Subtraction function // 
 const subtra = document.querySelector(".subtra")
 subtra.addEventListener('click',() => {
+    if(arr.length === 0 ){
+        alert('Please enter a number')
+        return display.textContent = 0;
+    }
+    else{
     arr.push('-');
     no1 = arr2.join('');
     arr2 = [];
     operator = '-'
     return display.textContent = arr.join('');
+    }
 })
+
+// Multiplication function // 
 const multi = document.querySelector(".multi")
 multi.addEventListener('click',() => {
+    if(arr.length === 0 ){
+        alert('Please enter a number')
+        return display.textContent = 0;
+    }
+    else{
     arr.push('*');
     no1 = arr2.join('');
     arr2 = [];
     operator = '*'
     return display.textContent = arr.join('');
+    }
 })
+
+// Divide function //
 const divide = document.querySelector(".divide")
 divide.addEventListener('click',() => {
+    if(arr.length === 0 ){
+        alert('Please enter a number')
+        return display.textContent = 0;
+    }
+    else{
     arr.push('/');
     no1 = arr2.join('');
     arr2 = [];
     operator = '/'
     return display.textContent = arr.join('');
+    }
 })
+
+// Clear function //
 const clear = document.querySelector('.clear')
 clear.addEventListener('click', () =>{
     arr = [];
@@ -145,19 +180,25 @@ clear.addEventListener('click', () =>{
     no2 = 0;
     return display.textContent = 0
 })
+
+// Equal Function //
 const equals = document.querySelector('.equal');
 equals.addEventListener('click',()=>{
     arr = [];
-    let tot;
     no2 = arr2.join('');
-    arr2 = [];
     if(no1 === 0 ){
-        tot = no2;
+        disptot = no2;
+        no2 = 0;
+        arr2 = [];
     }
     else{
-        tot = operate(parseInt(no1),operator,parseInt(no2));
+        disptot = operate(parseInt(no1),operator,parseInt(no2));
+        no1=0;
+        no2=0;
+        arr=[];
+        arr2=[];
     }
-    return display.textContent = tot;
+    return display.textContent = disptot;
 })
 
 
