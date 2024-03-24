@@ -2,6 +2,7 @@ body{
     height: 658px;
     padding: 0;
     margin: 0;
+    background-color:whitesmoke
 }
 
 .container{
@@ -10,17 +11,27 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    
 }
 
 .display{
-    height: 50px;
-    width: 212px;
+    height: 75px;
+    width: 300px;
     border: 3px solid black;
     text-align:end;
+    background-color: rgba(17, 14, 20, 0.849);
+    color: whitesmoke;
+    font-size: 32px;
+    border-radius: 10px;
 }
 
 button{
-    height: 50px;
-    width: 50px;
-    
+    height: 75px;
+    width: 75px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 255, 0.281);
 }
+button:hover {
+    background-color: #008CBA; 
+    color: white; 
+  }
