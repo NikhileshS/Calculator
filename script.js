@@ -118,6 +118,12 @@ addi.addEventListener('click',() => {
         return display.textContent = 0;
     }
     else{
+        if(operator !== 0){
+          arr = [];
+          no2 = arr2.join('')
+          disptot = operate(parseInt(no1),operator,parseInt(no2));
+          return display.textContent = disptot  
+        }
     arr.push('+');
     no1 = arr2.join('');
     arr2 = [];
@@ -148,9 +154,16 @@ subtra.addEventListener('click',() => {
         return display.textContent = 0;
     }
     else{
+        if(operator !== 0){
+          arr = [];
+          no2 = arr2.join('')
+          disptot = operate(parseInt(no1),operator,parseInt(no2));
+          return display.textContent = disptot  
+        }
     arr.push('-');
     no1 = arr2.join('');
-    operator = '-'
+    arr2 = [];
+    operator = '-';
     return display.textContent = arr.join('');
     }
 }
@@ -160,12 +173,13 @@ else{
     arr.push(disptot);
     arr.push('-');
     no1 = disptot;
-    arr2=[];
+    arr2 = [];
     operator = '-';
     disptot = 0;
     return display.textContent = arr.join('');
 }
-})
+}
+)
 
 // Multiplication function // 
 const multi = document.querySelector(".multi")
@@ -176,10 +190,16 @@ multi.addEventListener('click',() => {
         return display.textContent = 0;
     }
     else{
+        if(operator !== 0){
+            arr = [];
+            no2 = arr2.join('')
+            disptot = operate(parseInt(no1),operator,parseInt(no2));
+            return display.textContent = disptot  
+          }
     arr.push('*');
     no1 = arr2.join('');
     arr2 = [];
-    operator = '*'
+    operator = '*';
     return display.textContent = arr.join('');
     }
 }
@@ -205,6 +225,12 @@ divide.addEventListener('click',() => {
         return display.textContent = 0;
     }
     else{
+        if(operator !== 0){
+            arr = [];
+            no2 = arr2.join('')
+            disptot = operate(parseInt(no1),operator,parseInt(no2));
+            return display.textContent = disptot  
+          }
     arr.push('/');
     no1 = arr2.join('');
     arr2 = [];
